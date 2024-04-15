@@ -1,0 +1,14 @@
+<%- include('partials/navigation') %>
+<h1>Add Book</h1>
+<form action="/book/add" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="publishingYear">Publishing Year:</label>
+    <input type="number" id="publishingYear" name="publishingYear" required>
+
+    <label for="authorId">Author ID:</label>
+    <input type="number" id="authorId" name="authorId" required>
+
+    <button type="submit">Add Book</button>
+</form>

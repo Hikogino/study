@@ -1,0 +1,12 @@
+<%- include('partials/navigation') %>
+<h1>Books</h1>
+<% if (books.length) { %>
+    <ul>
+        <% books.forEach(function(book) { %>
+            <li><%= book.title %></li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No books have been found.</p>
+<% } %>
+

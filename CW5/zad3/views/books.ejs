@@ -1,0 +1,16 @@
+<%- include('partials/navigation') %>
+<h1>Books</h1>
+<% if (books.length) { %>
+    <ul>
+        <% books.forEach(function(book) { %>
+            <li><%= book.title %> - <form action="/book/delete/<%= book.id %>" method="POST" style="display:inline;">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+            </form></li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No books have been found.</p>
+<% } %>
+
+
